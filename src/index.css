@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #000000;
+  --color-surface-dim: #050505;
+  --color-surface-bright: #27272a;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container-low: #09090b;
+  --color-surface-container: #121214;
+  --color-surface-container-high: #18181b;
+  --color-surface-container-highest: #27272a;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #a1a1aa;
+  --color-inverse-surface: #ffffff;
+  --color-outline: #52525b;
+  --color-outline-variant: #27272a;
+  --color-surface-tint: #ffffff;
+  --color-primary: #ffffff;
+  --color-on-primary: #000000;
+  --color-primary-container: #27272a;
+  --color-secondary: #e4e4e7;
+  --color-secondary-container: #18181b;
+  --color-tertiary: #ffffff;
+  --color-tertiary-fixed-dim: #d4d4d8;
+  --color-background: #000000;
+  --color-on-background: #ffffff;
+
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer utilities {
+  .font-data-lg {
+    font-family: var(--font-mono);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+  .font-data-md {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .font-data-sm {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+  .font-label-caps {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .font-headline-xl {
+    font-family: var(--font-sans);
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+  .font-headline-lg {
+    font-family: var(--font-sans);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .font-headline-md {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+  }
+  .font-headline-sm {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Crypto-native subtle scanlines for live block tape & telemetry */
+.scanline-bg {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+.crypto-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+

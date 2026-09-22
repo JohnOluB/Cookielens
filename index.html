@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var _f = window.fetch;
+          if (_f) {
+            Object.defineProperty(window, 'fetch', {
+              get: function() { return _f; },
+              set: function(v) { _f = v; },
+              configurable: true,
+              enumerable: true
+            });
+          }
+        } catch (e) {
+          // ignore if already non-configurable
+        }
+      })();
+    </script>
+    <title>cookieLens - Blockchain Explorer</title>
+    <meta name="description" content="High-throughput blockchain analytics workbench and block explorer for Cookie Chain, engineered for on-chain telemetry, verifiable transactions, and smart contracts." />
+    <meta property="og:title" content="cookieLens - Blockchain Explorer" />
+    <meta property="og:description" content="High-throughput blockchain analytics workbench and block explorer for Cookie Chain, engineered for on-chain telemetry, verifiable transactions, and smart contracts." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-black text-[#f4f4f5] font-sans antialiased selection:bg-white selection:text-black">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,6 @@
+{
+  "name": "cookieLens - Blockchain Explorer",
+  "description": "High-throughput blockchain analytics workbench and block explorer for Cookie Chain, engineered for on-chain telemetry, verifiable transactions, and smart contracts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
