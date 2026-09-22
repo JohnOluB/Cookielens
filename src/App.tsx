@@ -16,7 +16,6 @@ import { TxDetailModal } from './components/TxDetailModal';
 import { AddressDetailModal } from './components/AddressDetailModal';
 import { TokenDetailModal } from './components/TokenDetailModal';
 import { WalletConnectModal } from './components/WalletConnectModal';
-import { SignInModal } from './components/SignInModal';
 import { SystemStatusModal } from './components/SystemStatusModal';
 import { BlockchainView } from './components/BlockchainView';
 import { ValidatorsView } from './components/ValidatorsView';
@@ -46,7 +45,6 @@ export default function App() {
 
   // Utility modals
   const [walletModalOpen, setWalletModalOpen] = useState(false);
-  const [signInModalOpen, setSignInModalOpen] = useState(false);
   const [statusModalOpen, setStatusModalOpen] = useState(false);
 
   // Background block streaming simulation
@@ -147,7 +145,6 @@ export default function App() {
         wallet={wallet}
         onOpenWalletModal={() => setWalletModalOpen(true)}
         onDisconnectWallet={disconnectNightly}
-        onOpenSignInModal={() => setSignInModalOpen(true)}
       />
 
       {/* Global Web3 Error Banner with instant retry */}
@@ -297,11 +294,6 @@ export default function App() {
       <WalletConnectModal
         isOpen={walletModalOpen}
         onClose={() => setWalletModalOpen(false)}
-      />
-
-      <SignInModal
-        isOpen={signInModalOpen}
-        onClose={() => setSignInModalOpen(false)}
       />
 
       <SystemStatusModal

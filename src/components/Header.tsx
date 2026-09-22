@@ -3,7 +3,6 @@ import {
   Fuel, 
   Gauge, 
   ChevronDown, 
-  User, 
   Wallet, 
   CheckCircle2,
   Copy,
@@ -23,7 +22,6 @@ interface HeaderProps {
   wallet: WalletAccount;
   onOpenWalletModal: () => void;
   onDisconnectWallet: () => void;
-  onOpenSignInModal: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -32,7 +30,6 @@ export const Header: React.FC<HeaderProps> = ({
   wallet,
   onOpenWalletModal,
   onDisconnectWallet,
-  onOpenSignInModal,
 }) => {
   const [walletDropdownOpen, setWalletDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -122,16 +119,8 @@ export const Header: React.FC<HeaderProps> = ({
           </nav>
         </div>
 
-        {/* Right Actions: Sign In, Connect Wallet, Avatar, Mobile Menu */}
+        {/* Right Actions: Connect Wallet, Avatar, Mobile Menu */}
         <div className="flex items-center gap-2 sm:gap-4">
-          <button
-            id="header-sign-in-btn"
-            onClick={onOpenSignInModal}
-            className="hidden sm:inline-block text-zinc-400 hover:text-white text-[14px] font-medium transition-colors cursor-pointer"
-          >
-            Sign In
-          </button>
-
           {/* Connect Wallet Button or Connected Indicator */}
           {!wallet.connected ? (
             <button
@@ -226,15 +215,6 @@ export const Header: React.FC<HeaderProps> = ({
               )}
             </div>
           )}
-
-          {/* Profile Avatar Icon */}
-          <div
-            onClick={onOpenSignInModal}
-            className="w-8 h-8 rounded-full bg-white flex items-center justify-center cursor-pointer hover:bg-zinc-200 transition-colors shadow-sm shrink-0"
-            title="User Account"
-          >
-            <User className="w-4 h-4 text-black" />
-          </div>
 
           {/* Mobile Navigation Toggle Button - ONLY exists for mobile (< 640px) */}
           <button
