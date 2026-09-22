@@ -1,4 +1,4 @@
-# CookieViz 
+# CookieLens 
 
 **Real-time Cookie Chain Ecosystem Health Dashboard & Transaction Decoder**
 
