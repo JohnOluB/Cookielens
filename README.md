@@ -2,7 +2,7 @@
 
 **Real-time Cookie Chain Ecosystem Health Dashboard & Transaction Decoder**
 
-CookieViz is an open-source analytics platform that brings transparency to Cookie Chain. Monitor ecosystem health in real-time, decode complex on-chain transactions, explore programs, and track your portfolio—all in one intuitive dashboard.
+CookieLens is an open-source analytics platform that brings transparency to Cookie Chain. Monitor ecosystem health in real-time, decode complex on-chain transactions, explore programs, and track your portfolio—all in one intuitive dashboard.
 
 ## Features
 
@@ -323,7 +323,7 @@ We welcome contributions! Here's how:
 - Add tests for new features
 - Update documentation
 
-## 🐛 Bug Reports
+## Bug Reports
 
 Found a bug? Open an issue with:
 - Description of the problem
