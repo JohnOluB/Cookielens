@@ -86,7 +86,7 @@ npm run start
 ## Project Structure
 
 ```
-cookieviz/
+cookielens/
 ├── public/               # Static assets, favicon
 ├── src/
 │   ├── app/
